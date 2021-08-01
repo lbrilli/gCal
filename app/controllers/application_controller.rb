@@ -10,18 +10,22 @@ class ApplicationController < ActionController::Base
         !!current_user
     end
 
-    def login(user)
+    def log_in(user)
         user.reset_session_token!
         session[:session_token] = user.session_token
         @current_user = user
+    end
 
-    def log_out
+    def log_out!
         current_user.reset_session_token! if logged_in?
         session[:session_token] = nil
         @current_user = nil
+    end
 
     def require_logged_in
         unless logged_in?
             render json: { base: ['inavlid credentials'] }, status: 401
+        end
+    end
 
 end

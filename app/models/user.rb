@@ -1,22 +1,22 @@
 class User < ApplicationRecord
     validates :email, :password_digest, :session_token, presence: true
-    validates :email, :uniqueness :true
+    validates :email, uniqueness: true
     validates :password, length: { minimum: 8}, allow_nil: true
 
-    after_intialize :ensure_session_token
+    after_initialize :ensure_session_token
 
     has_many :calendars,
         foreign_key: :owner_id,
-        class: :calendar
+        class_name: :calendar
 
     has_many :events,
         foreign_key: :owner_id,
-        class: :event
+        class_name: :event
 
     attr_reader :password
 
-    def self.find_by_credentials(username, password)
-        user = User.find_by(username: username)
+    def self.find_by_credentials(email, password)
+        user = User.find_by(email: email)
         if user && user.is_password?(password)
             user
         else
