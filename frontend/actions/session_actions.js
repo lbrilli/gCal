@@ -18,16 +18,16 @@ export const logoutCurrentUser = () => ({
     type: LOGOUT_CURRENT_USER,
 })
 
-export const signup = (user) => dispatch => (
-    SessionAPIUtil.signup(user).then(user => (
+export const sign_up = (user) => dispatch => (
+    SessionAPIUtil.sign_up(user).then(user => (
         dispatch(receiveCurrentUser(user))
     ), error => (
         dispatch(receiveErrors(error.responceJSON))
     ))
 )
 
-export const login = (user) => dispatch => (
-    SessionAPIUtil.login(user).then(user => (
+export const log_in = (user) => dispatch => (
+    SessionAPIUtil.log_in(user).then(user => (
         dispatch(receiveCurrentUser(user))
     ), error => (
         dispatch(receiveErrors(error.responseJSON))

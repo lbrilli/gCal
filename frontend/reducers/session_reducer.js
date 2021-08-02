@@ -1,6 +1,6 @@
 import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER } from "../actions/session_actions";
 
-const SessionReducer = (state = {}, action) => {
+const sessionReducer = (state = {}, action) => {
     Object.freeze(state);
     let nextState = Object.assign({id: null});
 
@@ -14,4 +14,4 @@ const SessionReducer = (state = {}, action) => {
     }
 }
 
-export default SessionReducer;
+export default sessionReducer;
