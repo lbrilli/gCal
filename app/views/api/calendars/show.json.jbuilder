@@ -1,0 +1,1 @@
+json.extract! @calendar, :id, :email, :owner_id, :timezone, :name
