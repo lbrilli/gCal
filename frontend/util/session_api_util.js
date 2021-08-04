@@ -7,11 +7,11 @@ export const log_in = user => (
 );
 
 export const sign_up = user => (
-    $.ajax({
-        method: 'POST',
-        url: '/api/user',
-        data: { user }
-    })
+        $.ajax({
+            method: 'POST',
+            url: '/api/users',
+            data: { user }
+        })
 );
 
 export const logout = () => (

@@ -3,7 +3,7 @@ import React from 'react'
 class SessionForm extends React.Component {
     constructor(props){
         super(props)
-        this.state = { email: '', password: ''}
+        this.state = {email: '', password: ''}
     
         this.handlesSubmit = this.handlesSubmit.bind(this)
     }
@@ -20,6 +20,13 @@ class SessionForm extends React.Component {
 
     renderErrors () {
         return (
+            <ul>
+                {this.props.errors.map((error, idx) =>
+                <li key={`error-${idx}`}>
+                    {error}
+                </li>
+                )}
+            </ul>
         );
     }
 
@@ -30,11 +37,19 @@ class SessionForm extends React.Component {
                     {this.props.formType} <br /> to continue to gCal
                     <br />
                     <label>Email:
-                        <input type="text" />
+                        <input type="text" value ={this.state.email} 
+                            onChange={this.update('email')} className="login-field"/>
                     </label>
-                    {/* render errors below boxes and above button */}
-                    {/* button here */}
-                    {/* link to other option */}
+                    <br />
+                    <label >Password:
+                        <input type="password" value={this.state.password}
+                            onChange={this.update('password')} className="login-field" />
+                    </label>
+                    <br />
+                        {this.renderErrors()}
+                    <br />
+                    <input type="submit" value={this.props.formType} className="submit-button" />
+                    <br />
                 </form>
             </div>
         )
