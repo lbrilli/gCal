@@ -1,6 +1,6 @@
 import { RECEIVE_CALENDAR, RECEIVE_CALENDARS } from "../actions/calendar_actions";
 
-const calendarReducer = (state ={}. action) => {
+const calendarReducer = (state ={}, action) => {
     Object.freeze(state);
     let nextState = Object.assign({},state);
 
