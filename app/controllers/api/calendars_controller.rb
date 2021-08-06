@@ -25,8 +25,8 @@ class Api::CalendarsController < ApplicationController
     end
 
     def index
-        @calendars = Calendar.all
-        render "api/calendars"
+        @calendars = Calendar.all #use different query to get ONLY a specific user's calendars
+        render "api/calendars/index"
 
     end
 

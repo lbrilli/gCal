@@ -22,10 +22,9 @@ export const show = calendar => (
     })
 )
 
-export const index = calendars => (
+export const index = () => (
     $.ajax ({
         method: 'GET',
         url: `/api/calendars/`,
-        data: { calendars }
     })
 )

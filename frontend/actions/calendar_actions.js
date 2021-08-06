@@ -43,8 +43,8 @@ export const show = (calendar) => dispatch => (
     ))
 )
 
-export const index = (calendars) => dispatch => (
-    CalendarAPIUtil.index(calendars).then(calendars => (
+export const index = () => dispatch => (
+    CalendarAPIUtil.index().then(calendars => (
         dispatch(receiveCalendars(calendars))
     ), error => (
         dispatch(receiveCalendarErrors(error.responseJSON))
