@@ -2,10 +2,9 @@ class Api::CalendarsController < ApplicationController
 
     def create
         @calendar = Calendar.new(calendar_params)
-        @calendar.owner_id = params[:user_id]
-
+        @calendar.owner_id = params[:calendar][:owner_id]
         if @calendar.save
-            render api_calendar(@calendar.id)
+            render "api/calendar/#{@calendar.id}"
         else
             render json: ["Invalid username/password combination"], status: 401
         end
@@ -25,7 +24,7 @@ class Api::CalendarsController < ApplicationController
     end
 
     def index
-        @calendars = Calendar.all #use different query to get ONLY a specific user's calendars
+        @calendars = Calendar.all.select{|calendar| calendar.owner_id == current_user.id}
         render "api/calendars/index"
 
     end

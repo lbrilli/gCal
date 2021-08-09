@@ -18,7 +18,6 @@ export const show = calendar => (
     $.ajax ({
         method: 'GET',
         url: `/api/calendars/${calendar.id}`,
-        data: { calendar }
     })
 )
 

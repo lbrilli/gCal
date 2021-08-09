@@ -1,0 +1,88 @@
+ /* Main header */
+ .gcal-head {
+     text-align: center;
+     width: 20%;
+     display: inline-block;
+ }
+
+ .today-button {
+     display: inline-block;
+     width: 5%;
+     margin-left: 1.5%;
+     border-radius: 15;
+ }
+
+ .head-month {
+     text-align: center;
+     width: 57%;
+     display: inline-block;
+ }
+
+
+ .log-out-button {
+   float: right;
+   width: 8%;
+   margin-top: 2%;
+ }
+
+ /* Timezone and time column */
+.time-column-title {
+    display: inline-block;
+    width: 10%;
+}
+
+ /* Main calendar grid */
+ .main-calendar {
+     display:inline-block;
+     align-items: right;
+     width: 78%;
+     margin-left: 2%;
+ }
+
+ .day-header, .single-hours-column{
+     display: grid;
+     gap: 5px;
+     grid-template-columns: repeat(7,1fr);
+ }
+
+ .grid-item {
+     border: darkgray solid 5px;
+ }
+
+ .day-header {
+     color: rgb(104, 103, 103);
+ }
+
+ .single-hours-column {
+     color:lightgrey;
+ }
+
+/* Small month view grid */
+.small-calendar {
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.create {
+    margin-bottom: 3%;
+}
+
+.weekday {
+    font-size: x-small;
+}
+
+.weekday, .date {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* calendar index list */
+.calendar-index {
+    text-align: center;
+}
+
+.calendar-list-item {
+    list-style-type: none;
+    text-align: center;
+}

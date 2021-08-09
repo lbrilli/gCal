@@ -17,7 +17,7 @@ class CalendarIndex extends React.Component {
                 <h3>My calendars</h3>
                 <ul>
                     {this.props.calendars.map(calendar => {
-                        return (<li><Link to={`/calendars/${calendar.id}`}>{calendar.name}</Link></li>)
+                        return (<li className="calendar-list-item"><Link to={`/calendars/${calendar.id}`}>{calendar.name}</Link></li>)
                     })}
                 </ul>
             </div>

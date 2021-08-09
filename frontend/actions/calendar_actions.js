@@ -30,23 +30,17 @@ export const create = (calendar) => dispatch => (
 export const destroy = (calendar) => dispatch => (
     CalendarAPIUtil.destroy(calendar).then(calendar => (
         dispatch(receiveCalendar(calendar))
-    ), error => (
-        dispatch(receiveCalendarErrors(error.responseJSON))
     ))
 )
 
 export const show = (calendar) => dispatch => (
     CalendarAPIUtil.show(calendar).then(calendar => (
         dispatch(receiveCalendar(calendar))
-    ), error => (
-        dispatch(receiveCalendarErrors(error.responseJSON))
     ))
 )
 
 export const index = () => dispatch => (
     CalendarAPIUtil.index().then(calendars => (
         dispatch(receiveCalendars(calendars))
-    ), error => (
-        dispatch(receiveCalendarErrors(error.responseJSON))
-    ))
+))
 )
