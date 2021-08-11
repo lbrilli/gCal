@@ -42,6 +42,8 @@
 .time-column-title {
     display: inline-block;
     width: 10%;
+    color: lightgrey;
+    padding-top: 180%;
 }
 
 .time-and-hours {
@@ -57,14 +59,14 @@
      margin-top: 2%;
  }
 
- .day-header, .single-hours-column{
+.single-hours-column{
      display: grid;
-     gap: 5px;
-     grid-template-columns: repeat(7,1fr);
+     grid-template-columns: repeat(7,45%);
  }
 
  .grid-item {
-     border: darkgray solid 5px;
+     border: lightgrey solid 1px;
+     /* add in logic to lose outer borders */
  }
 
  .day-header {
@@ -75,8 +77,8 @@
      color:lightgrey;
  }
 
-/* Small month view grid */
-.small-calendar {
+/* Left Column */
+.left-column{
     width: 20%;
     float: left;
     text-align: center;
@@ -88,7 +90,7 @@
     border: none;
 }
 .small-calendar-button:hover {
-    background-color: lightskyblue;
+    background-color: lightgrey;
 }
 
 .create {
