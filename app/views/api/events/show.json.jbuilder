@@ -1,0 +1,1 @@
+json.extract! @event, :id, :owner_id, :name, :date_time

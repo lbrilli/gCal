@@ -6,6 +6,8 @@ import SignUpFormContainer from './session_components/sign_up_form_container';
 import CalendarsContainer from './calendar_components/calendar_index_container'
 import CalendarFormContainer from './calendar_components/calendar_form_container';
 import CalendarContainer from './calendar_components/calendar_container';
+import EventContainer from './event_components/event_container'
+import EventFormContainer from './event_components/event_form_container';
 
 const App = () => (
     <div>
@@ -19,6 +21,8 @@ const App = () => (
             <Route exact path="/calendars" component={CalendarsContainer} />
             <Route exact path="/calendars/new" component={CalendarFormContainer} />
             <Route path="/calendars/:calenderId" component={CalendarContainer} />
+            <Route exact path="/events" component={EventContainer} />
+            <Route exact path="/events/:eventId" component={EventFormContainer} />
         </Switch>
     </div>
 )
