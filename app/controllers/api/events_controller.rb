@@ -3,7 +3,7 @@ class Api::EventsController < ApplicationController
     def create
         @event = Event.new(event_params)
         if @event.save
-            render "api/event/#{@event.id}"
+            render "api/events/#{@event.id}"
         else
             render json: ["required fields must not be blank"], status: 401
         end

@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 class CalendarForm extends React.Component {
     constructor (props) {
@@ -50,6 +51,8 @@ class CalendarForm extends React.Component {
                     <br />
                         <input type="submit" value="Create" className="submit-button" />
                 </form>
+                <br />
+                    <Link to="/calendars/1">back to calendar</Link>
             </div>
         )
     }
