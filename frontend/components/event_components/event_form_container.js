@@ -6,7 +6,8 @@ const mSTP = (state) => {
     let errors = state.errors
     return {
         errors: errors,
-        currentUser: state.session.id
+        currentUser: state.session.id,
+        calendarId: 1
     }
 };
 

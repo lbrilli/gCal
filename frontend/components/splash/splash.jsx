@@ -14,7 +14,7 @@ const Splash = ({ currentUser, logout}) => {
     const endSession = () => (
         <>
             <button className="today-button">Today</button>
-            <h1 className="head-month" >August 2021</h1>
+            <p className="head-month" >August 2021</p>
             <button className='log-out-button' onClick={logout}>Log out</button>
         </>
     );

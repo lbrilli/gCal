@@ -1,30 +1,37 @@
  /* Main header */
  .header {
      border-bottom: solid 1px lightgrey;
+     text-align: left;
  }
  .gcal-head {
      text-align: left;
-     width: 12%;
+     width: 14%;
      height: 4%;
      padding-top:1%;
      padding-left: 40px;
      display: inline-block;
      content:url(logo.png);
+     font-family: Arial, Helvetica, sans-serif;
  }
 
  .today-button {
      display: inline-block;
-     width: 5%;
+     width: 8%;
      margin-left: 6%;
      border-radius: 11%;
      background: white;
      border-color: lightgrey;
+     box-shadow: lightgrey;
  }
 
  .head-month {
      text-align: center;
      width: 65%;
      display: inline-block;
+     text-shadow: lightgrey;
+     font-weight: lighter;
+     color:rgb(77, 77, 77);
+     font-size: x-large;
  }
 
 
@@ -36,18 +43,20 @@
    border-radius: 50%;
    padding: 4px 4px 4px 4px;
    background: white;
+   box-shadow: lightgrey;
  }
 
  /* Timezone and time column */
 .time-column-title {
     display: inline-block;
     width: 10%;
-    color: lightgrey;
+    color: rgb(77, 77, 77);
     padding-top: 180%;
 }
 
 .time-and-hours {
     display: flex;
+    color: rgb(77, 77, 77);
 }
 
  /* Main calendar grid */
@@ -70,37 +79,51 @@
  }
 
  .day-header {
-     color: rgb(104, 103, 103);
+     color: rgb(77, 77, 77);
  }
 
  .single-hours-column {
-     color:lightgrey;
+     color:rgb(77, 77, 77);
  }
 
 /* Left Column */
 .left-column{
     width: 20%;
     float: left;
+}
+
+.month {
     text-align: center;
+    color: rgb(77, 77, 77);
 }
 
 .small-calendar-button {
     border-radius: 100%;
     background: white;
     border: none;
+    color:rgb(77, 77, 77);
 }
 .small-calendar-button:hover {
     background-color: lightgrey;
+}
+.small-calendar-button:focus {
+    background-color: lightskyblue;
 }
 
 .create {
     margin-top: 10%;
     margin-bottom: 10%;
     border-radius: 25px;
+    border-style: solid;
     background-color: rgb(243, 243, 243);
     padding: 2px 6px 2px 6px;
     width: 125px;
     height: 40px;
+    box-shadow: lightgrey;
+    border-color: lightgrey;
+    font-size: large;
+    color:rgb(77, 77, 77);
+    text-decoration: none;
 }
 
 .weekday {
@@ -110,6 +133,7 @@
 .weekday, .date {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
+    color: rgb(77, 77, 77);
 }
 
 /* calendar index list */
@@ -134,4 +158,5 @@
     color: black;
     background-color: rgb(238, 238, 238);
     border-radius: 25px;
+    box-shadow: lightgrey;
 }

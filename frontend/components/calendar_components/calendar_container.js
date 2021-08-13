@@ -7,7 +7,8 @@ const mSTP = (state) => {
     return {
         errors: errors,
         currentUser: state.session.id,
-        calendar: Object.assign(state.entities.calendars)
+        calendar: Object.assign(state.entities.calendars),
+        events: Object.assign(state.entities.events)
     }
 }
 

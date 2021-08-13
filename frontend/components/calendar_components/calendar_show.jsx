@@ -45,7 +45,7 @@ class CalendarShow extends React.Component {
             let hours = []
             for (let i = 1; i < 24; i++) {
                 for (let j = 1; j < 8; j++) {
-                    hours.push(<div className="grid-item" id={`${i}-${j}`}>{i}-{j}</div>)
+                    hours.push(<div className="grid-item" id={`${i}-${j}`}></div>)
                 }
             }
             return hours;
@@ -56,7 +56,7 @@ class CalendarShow extends React.Component {
         return (
             <>
                 <div className="left-column">
-                    <button className="create">+ Create</button>
+                    <Link to="/events/new" className="create">+ Create</Link>
 
                     <div className="month">
                         {DateFns.format(date, 'MMMM')} {DateFns.getYear(date)}

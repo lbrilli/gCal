@@ -2,7 +2,6 @@ class Api::EventsController < ApplicationController
 
     def create
         @event = Event.new(event_params)
-        @event.owner_id = params[:event][:owner_id]
         if @event.save
             render "api/event/#{@event.id}"
         else
@@ -33,6 +32,6 @@ class Api::EventsController < ApplicationController
     end
 
     def event_params
-        params.require(:event).permit(:calendar_id, :name, :date_time)
+        params.require(:event).permit(:name, :date_time, :owner_id, :calendar_id)
     end
 end
