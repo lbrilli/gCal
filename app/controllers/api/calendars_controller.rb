@@ -1,5 +1,4 @@
 class Api::CalendarsController < ApplicationController
-
     def create
         @calendar = Calendar.new(calendar_params)
         @calendar.owner_id = params[:calendar][:owner_id]
@@ -26,7 +25,6 @@ class Api::CalendarsController < ApplicationController
     def index
         @calendars = Calendar.all.select{|calendar| calendar.owner_id == current_user.id}
         render "api/calendars/index"
-
     end
 
     def calendar_params
