@@ -1,5 +1,4 @@
 class Api::CalendarsController < ApplicationController
-
     def create
         @calendar = Calendar.new(calendar_params)
         @calendar.owner_id = params[:calendar][:owner_id]
