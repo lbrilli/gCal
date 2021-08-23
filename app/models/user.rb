@@ -7,11 +7,11 @@ class User < ApplicationRecord
 
     has_many :calendars,
         foreign_key: :owner_id,
-        class_name: :calendar
+        class_name: :Calendar
 
     has_many :events,
         foreign_key: :owner_id,
-        class_name: :event
+        class_name: :Event
 
     attr_reader :password
 

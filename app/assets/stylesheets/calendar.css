@@ -1,0 +1,137 @@
+ /* Main header */
+ .header {
+     border-bottom: solid 1px lightgrey;
+ }
+ .gcal-head {
+     text-align: left;
+     width: 12%;
+     height: 4%;
+     padding-top:1%;
+     padding-left: 40px;
+     display: inline-block;
+     content:url(logo.png);
+ }
+
+ .today-button {
+     display: inline-block;
+     width: 5%;
+     margin-left: 6%;
+     border-radius: 11%;
+     background: white;
+     border-color: lightgrey;
+ }
+
+ .head-month {
+     text-align: center;
+     width: 65%;
+     display: inline-block;
+ }
+
+
+ .log-out-button {
+   float: right;
+   width: 4%;
+   height: 8%;
+   margin-top: 2%;
+   border-radius: 50%;
+   padding: 4px 4px 4px 4px;
+   background: white;
+ }
+
+ /* Timezone and time column */
+.time-column-title {
+    display: inline-block;
+    width: 10%;
+    color: lightgrey;
+    padding-top: 180%;
+}
+
+.time-and-hours {
+    display: flex;
+}
+
+ /* Main calendar grid */
+ .main-calendar {
+     display:inline-block;
+     align-items: right;
+     width: 78%;
+     margin-left: 2%;
+     margin-top: 2%;
+ }
+
+.single-hours-column{
+     display: grid;
+     grid-template-columns: repeat(7,45%);
+ }
+
+ .grid-item {
+     border: lightgrey solid 1px;
+     /* add in logic to lose outer borders */
+ }
+
+ .day-header {
+     color: rgb(104, 103, 103);
+ }
+
+ .single-hours-column {
+     color:lightgrey;
+ }
+
+/* Left Column */
+.left-column{
+    width: 20%;
+    float: left;
+    text-align: center;
+}
+
+.small-calendar-button {
+    border-radius: 100%;
+    background: white;
+    border: none;
+}
+.small-calendar-button:hover {
+    background-color: lightgrey;
+}
+
+.create {
+    margin-top: 10%;
+    margin-bottom: 10%;
+    border-radius: 25px;
+    background-color: rgb(243, 243, 243);
+    padding: 2px 6px 2px 6px;
+    width: 125px;
+    height: 40px;
+}
+
+.weekday {
+    font-size: x-small;
+}
+
+.weekday, .date {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+}
+
+/* calendar index list */
+.calendar-index {
+    text-align: left;
+    padding-left: 2%;
+}
+
+.calendar-list-item {
+    list-style-type: none;
+    text-align: left;
+    justify-content: left;
+}
+
+.new-calendar-button {
+    border-bottom: solid darkgray 1px;
+    border-top: solid darkgray 1px;
+    border-left: solid darkgray 1px;
+    border-right: solid darkgray 1px;
+    text-decoration: none;
+    padding: 2px 6px 2px 6px;
+    color: black;
+    background-color: rgb(238, 238, 238);
+    border-radius: 25px;
+}
