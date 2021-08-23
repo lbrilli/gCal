@@ -38,12 +38,12 @@ class SessionForm extends React.Component {
                     <br />
                     <label>Email:
                         <input type="text" value ={this.state.email} 
-                            onChange={this.update('email')} className="login-field"/>
+                            onChange={this.update('email')} className="form-field"/>
                     </label>
                     <br />
                     <label >Password:
                         <input type="password" value={this.state.password}
-                            onChange={this.update('password')} className="login-field" />
+                            onChange={this.update('password')} className="form-field" />
                     </label>
                     <br />
                         {this.renderErrors()}
