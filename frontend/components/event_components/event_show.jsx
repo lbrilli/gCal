@@ -11,6 +11,7 @@ class EventShow extends React.Component {
     render() { 
         return (
             <div>
+                <h1>Hello</h1>
                 {this.state.name}
                 {this.state.timeDate}
             </div>

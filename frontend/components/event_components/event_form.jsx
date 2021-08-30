@@ -65,7 +65,7 @@ class EventForm extends React.Component {
                     <input type="submit" value="Create" className="submit-button" />
                 </form>
                 <br />
-                <Link to="/calendars/1">back to calendar</Link>
+                <Link to="/calendars/1">back to calendar</Link> 
             </div>
         )
     }
