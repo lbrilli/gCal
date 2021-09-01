@@ -10,38 +10,58 @@ class CalendarShow extends React.Component {
         {
             name:'', 
             timezone:'', 
-            ownerId: props.currentUser
-        }
+            ownerId: props.currentUser, 
+            currentMonth
+        };
     }
-    
 
-    render () {
+    renderLeftColumn() {
         const date = new Date()
 
+        // small calendar creator
         const makeSmallCalendar = () => {
             let dates = []
             for (let i = 0; i < 35; i++) {
             let sMon = DateFns.startOfMonth(date);
             let sWeek = DateFns.startOfWeek(sMon);
-            dates.push(
-                <button className="small-calendar-button">
-                    {
-                        String (
-                            DateFns.format (
-                                DateFns.add (
-                                    DateFns.startOfWeek(sWeek), 
-                                    { days: i }
-                                ),
-                                'd'
-                            )
-                        )
-                    }
-                </button>)
+            dates.push(<button className="small-calendar-button">{String(DateFns.format(DateFns.add(DateFns.startOfWeek(sWeek), { days: i }), 'd'))}</button>)
             }
             return dates
         }
 
-        const smallCalendar = makeSmallCalendar();
+        return (
+                <div className="left-column">
+                    <Link to="/events/new" className="create">+ Create</Link>
+
+                    <div className="month">
+                        {DateFns.format(date, 'MMMM')} {DateFns.getYear(date)}
+                    </div>
+
+                    <div className="weekday">
+                        <div>SUN</div>
+                        <div>MON</div>
+                        <div>TUE</div>
+                        <div>WED</div>
+                        <div>THUR</div>
+                        <div>FRI</div>
+                        <div>SAT</div>
+                    </div>
+
+                    <div className="date">
+                        {makeSmallCalendar()}
+                    </div>
+
+                    <div className="calendar-index">
+                        <CalendarsContainer />
+                        <br />
+                        <Link to="/calendars/new" className="new-calendar-button">+ New Calendar</Link>
+                    </div>
+                </div>
+        );
+    }
+    
+
+    render () {
 
         const makeHourColumn = () => {
             let times = []
@@ -73,44 +93,13 @@ class CalendarShow extends React.Component {
 
         return (
             <>
-                <div className="left-column">
-                    <Link to="/events/new" className="create">+ Create</Link>
+                <div className="left-column">{this.renderLeftColumn()}</div>
 
-                    <div className="month">
-                        {DateFns.format(date, 'MMMM')} {DateFns.getYear(date)}
-                    </div>
-
-                    <div className="weekday">
-                        <div>SUN</div>
-                        <div>MON</div>
-                        <div>TUE</div>
-                        <div>WED</div>
-                        <div>THUR</div>
-                        <div>FRI</div>
-                        <div>SAT</div>
-                    </div>
-
-                    <div className="date">
-                        {smallCalendar}
-                    </div>
-
-                    <div className="calendar-index">
-                        <CalendarsContainer />
-                        <br />
-                        <Link to="/calendars/new" className="new-calendar-button">
-                            + New Calendar
-                        </Link>
-                    </div>
-
-
-                </div>
-
-                <div className="main-calendar">
+                {/* <div className="main-calendar">
 
                     <div className="time-and-hours">
                         <div className="time-column">
-                            <div className="time-column-title">
-                                {DateFns.format(date, 'O')}
+                            <div className="time-column-title">{DateFns.format(date, 'O')}
                                 {hourColumn}
                             </div>
                         </div>
@@ -126,7 +115,7 @@ class CalendarShow extends React.Component {
                             {hourBlocks}
                         </div>
                     </div>
-                </div>
+                </div> */}
             </>
         )
     }

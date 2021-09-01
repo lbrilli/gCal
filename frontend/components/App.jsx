@@ -22,7 +22,9 @@ const App = () => (
             <Route exact path="/calendars/new" component={CalendarFormContainer} />
             <Route path="/calendars/:calenderId" component={CalendarContainer} />
             <Route exact path="/events" component={EventContainer} />
-            <Route path="/events/:eventId" component={EventFormContainer} />
+            <Route exact path="/events/new" component={EventFormContainer} />
+            <Route path="/events/:eventId" component={EventContainer} />
+
         </Switch>
     </div>
 )

@@ -19,7 +19,7 @@ class Api::CalendarsController < ApplicationController
     end
 
     def show
-        @calendar - Calendar.find(params[:id])
+        @calendar = Calendar.find(params[:id])
         render api_calendar(@calendar.id)
     end
 
