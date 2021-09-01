@@ -1,44 +1,4 @@
- /* Main header */
- .header {
-     border-bottom: solid 1px lightgrey;
- }
- .gcal-head {
-     text-align: left;
-     width: 12%;
-     height: 4%;
-     padding-top:1%;
-     padding-left: 40px;
-     display: inline-block;
-     content:url(logo.png);
- }
-
- .today-button {
-     display: inline-block;
-     width: 5%;
-     margin-left: 6%;
-     border-radius: 11%;
-     background: white;
-     border-color: lightgrey;
- }
-
- .head-month {
-     text-align: center;
-     width: 65%;
-     display: inline-block;
- }
-
-
- .log-out-button {
-   float: right;
-   width: 4%;
-   height: 8%;
-   margin-top: 2%;
-   border-radius: 50%;
-   padding: 4px 4px 4px 4px;
-   background: white;
- }
-
- /* Timezone and time column */
+/* Timezone and time column */
 .time-column-title {
     display: inline-block;
     width: 10%;

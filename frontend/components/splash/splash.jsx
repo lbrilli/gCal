@@ -1,5 +1,9 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import * as DateFns from 'date-fns';
+
+const date = new Date();
+const dateFormat = "MMMM yyyy";
 
 const Splash = ({ currentUser, logout}) => {
 
@@ -13,9 +17,26 @@ const Splash = ({ currentUser, logout}) => {
 
     const endSession = () => (
         <>
-            <button className="today-button">Today</button>
-            <h1 className="head-month" >August 2021</h1>
-            <button className='log-out-button' onClick={logout}>Log out</button>
+            <div className="header-middle">
+                <div className="today-month">
+                    <button className="today-button">Today</button>
+                    <button>{"<"}</button>
+                    <button>{">"}</button>
+                    <h1 className="head-month" >{String(DateFns.format(date, dateFormat))}</h1>
+                </div>
+
+                <div className="view-selector">
+                    <button>DropDown</button>
+                    {/* <DropdownButton id="" title="View Selector">
+                        <Dropdown.Item href="">Week</Dropdown.Item>
+                        <Dropdown.Item href="">Month</Dropdown.Item>
+                    </DropdownButton> */}
+                </div>
+            </div>
+
+            <div className="logout-div">
+                <button className='log-out-button' onClick={logout}>Log out</button>
+            </div>
         </>
     );
 
