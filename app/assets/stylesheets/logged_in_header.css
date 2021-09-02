@@ -18,8 +18,20 @@
      flex: 1 0 auto;
      vertical-align: middle;
      white-space: nowrap;
-     content:url(logo.png);
+     align-items: center;
  }
+
+ .logo {
+     content:url(logo.png);
+     outline: none;
+     display: inline-block;
+     vertical-align: middle;
+     white-space: nowrap;
+     position: relative;
+     height: 48px;
+     padding-left: 46px;
+ }
+
  .header-middle {
      justify-content: space-between;
      flex: 1 1 100%;
@@ -36,23 +48,58 @@
      vertical-align: middle;
      text-align: initial;
      white-space: nowrap;
+     font-family: inherit;
 
  }
 
- /* .today-button {
+ .today-chevrons {
+     
+ }
+
+ .today-button {
+     border-radius: 4px;
+     border: 1px solid #dadce0;
+     box-sizing: border-box;
+     height: 36px;
+     margin-right: 12px;
+     cursor: pointer;
      display: inline-block;
-     width: 5%;
-     margin-left: 6%;
-     border-radius: 11%;
-     background: white;
-     border-color: lightgrey;
+     font-size: 14;
+     font-weight: 500;
+     overflow: hidden;
+     position: relative;
+     text-align: center;
+     font-family: inherit;
+ }
+
+ .chevron-div-head {
+
+ }
+
+ .chevron-prev-head {
+    width: 32px;
+    height: 32px;
+    margin-left: 8px;
+    color: #5f6368;
+    vertical-align: top;
+    border: 0;
+    border: 50%;
+    cursor: pointer;
+    display: inline-block;
+    outline: none;
+    overflow: hidden;
+    position: relative;
+    text-align: center;
+ }
+
+ .chevron-next-head {
+
  }
 
  .head-month {
      text-align: center;
-     width: 65%;
      display: inline-block;
- } */
+ }
 
  .logout-div {
      box-sizing: border-box;

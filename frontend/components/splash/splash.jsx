@@ -19,9 +19,13 @@ const Splash = ({ currentUser, logout}) => {
         <>
             <div className="header-middle">
                 <div className="today-month">
-                    <button className="today-button">Today</button>
-                    <button>{"<"}</button>
-                    <button>{">"}</button>
+                    <div className="today-chevrons">
+                        <button className="today-button">Today</button>
+                        <div className="chevron-div-head">
+                            <button className="chevron-prev-head">{"<"}</button>
+                            <button className="chevron-next-head">{">"}</button>
+                        </div>
+                    </div>
                     <h1 className="head-month" >{String(DateFns.format(date, dateFormat))}</h1>
                 </div>
 

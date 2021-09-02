@@ -10,7 +10,9 @@ import CalendarContainer from './calendar_components/calendar_container';
 const App = () => (
     <div>
         <header className="header">
-            <div className="gcal-head"></div>
+            <div className="gcal-head">
+                <div className="logo"></div>
+            </div>
             <SplashContainer />
         </header>
         <Switch>
