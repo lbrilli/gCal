@@ -43,20 +43,19 @@
 
  .today-month {
      overflow: hidden;
-     display: table-cell;
      height: 48px;
-     vertical-align: middle;
      text-align: initial;
      white-space: nowrap;
      font-family: inherit;
+     display: flex;
+     margin-right: 4px;
+     white-space: nowrap;
+     align-items: center;
 
  }
 
  .today-chevrons {
      display: flex;
-     margin-right: 4px;
-     white-space: nowrap;
-     align-items: center;
  }
 
  .today-button {
@@ -80,7 +79,7 @@
  }
 
  .chevron-div-head {
-
+    padding-top: 4px;
  }
 
  .chevron-prev-head {
@@ -130,8 +129,15 @@
  }
 
  .head-month {
-     text-align: center;
-     display: inline-block;
+    color: #3c4043;
+    font-family: inherit;
+    font-size: 22px;
+    font-weight: 400;
+    white-space: nowrap;
+    text-align: initial;
+    float: left;
+    position: relative;
+
  }
 
  .logout-div {

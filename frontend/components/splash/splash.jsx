@@ -26,7 +26,7 @@ const Splash = ({ currentUser, logout}) => {
                             <button className="chevron-next-head">{">"}</button>
                         </div>
                     </div>
-                    <h1 className="head-month" >{String(DateFns.format(date, dateFormat))}</h1>
+                    <div className="head-month">{String(DateFns.format(date, dateFormat))}</div>
                 </div>
 
                 <div className="view-selector">
