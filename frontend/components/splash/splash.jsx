@@ -29,9 +29,8 @@ const Splash = ({ currentUser, logout}) => {
                     <div className="head-month">{String(DateFns.format(date, dateFormat))}</div>
                 </div>
 
-                <div className="view-selector">
-                    {/* <button>DropDown</button> */}
-                    <select name="views">
+                <div className="view-selector-div">
+                    <select name="views" className="view-selector">
                         <option value="Week">Week</option>
                         <option value="Month">Month</option>
                     </select>
@@ -39,7 +38,7 @@ const Splash = ({ currentUser, logout}) => {
             </div>
 
             <div className="logout-div">
-                <button className='log-out-button' onClick={logout}>Log out</button>
+                <button className='log-out-button' onClick={logout}> Out </button>
             </div>
         </>
     );

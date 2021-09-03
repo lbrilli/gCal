@@ -61,6 +61,7 @@
     padding: 2px 6px 2px 6px;
     width: 125px;
     height: 40px;
+    font: inherit;
 }
 
 .weekday {

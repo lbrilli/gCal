@@ -56,7 +56,7 @@ class CalendarShow extends React.Component {
         return (
             <>
                 <div className="left-column">
-                    <button className="create">+ Create</button>
+                    <button className="create">Create</button>
 
                     <div className="month">
                         {DateFns.format(date, 'MMMM')} {DateFns.getYear(date)}
