@@ -30,11 +30,11 @@ const Splash = ({ currentUser, logout}) => {
                 </div>
 
                 <div className="view-selector">
-                    <button>DropDown</button>
-                    {/* <DropdownButton id="" title="View Selector">
-                        <Dropdown.Item href="">Week</Dropdown.Item>
-                        <Dropdown.Item href="">Month</Dropdown.Item>
-                    </DropdownButton> */}
+                    {/* <button>DropDown</button> */}
+                    <select name="views">
+                        <option value="Week">Week</option>
+                        <option value="Month">Month</option>
+                    </select>
                 </div>
             </div>
 
