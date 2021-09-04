@@ -168,16 +168,14 @@
      font-size: 14px;
      text-align: center;
      padding: 0;
+     cursor: pointer;
  }
-
- .view-selector-div {
-  }
 
   .view-selector {
       min-width: auto;
       height: 36px;
+      
       padding-left: 8px;
-      padding-right: 8px;
       color: #222;
       border: 1px solid #dadce0;
       border-radius: 3px;
