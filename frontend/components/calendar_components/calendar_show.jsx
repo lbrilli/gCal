@@ -56,8 +56,10 @@ class CalendarShow extends React.Component {
         return (
             <>
                 <div className="left-column">
-                    <button className="create">Create</button>
-
+                    <div className="create-button-div">
+                        <button className="create">Create</button>
+                    </div>
+                <div className="small-calendar-div">
                     <div className="month">
                         {DateFns.format(date, 'MMMM')} {DateFns.getYear(date)}
                     </div>
@@ -75,12 +77,15 @@ class CalendarShow extends React.Component {
                     <div className="date">
                         {smallCalendar}
                     </div>
+                </div>
 
+                <div className="calendar-index-div">
                     <div className="calendar-index">
                         <CalendarsContainer />
                         <br />
                         <Link to="/calendars/new" className="new-calendar-button">+ New Calendar</Link>
                     </div>
+                </div>
 
 
                 </div>
